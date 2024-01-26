@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!--setter injection-->
+	<bean class="com.sit.Employee" id="emp1" autowire="byType">
+		<property name="id" value="123" />
+		<property name="name" value="Ravi" />
+		
+	</bean>
+	<bean  class="com.sit.Address">
+		<property name="pincode" value="444907" />
+		<property name="cityName" value="Hyderabad" />
+	</bean>
+
+	<bean class="com.sit.Employee" id="emp2" autowire="byType">
+		<!--setter injection-->
+		<property name="id" value="123" />
+		<property name="name" value="Soumya" />
+	</bean>
+
+
+</beans>
